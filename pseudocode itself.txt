@@ -1,0 +1,103 @@
+// Import random library
+import random
+
+// Set a list to store number of attempts
+attempts_list=[]
+
+// Game initiates
+         //Setting random number function with range
+          random_number=int(random.randint(1,50)) 
+
+          // Greet and chat with the user and ask name of the player
+          print("Hello, Gamer ") 
+          print("Welcome To The Number Guessing Game ")
+          print("Let's Play An Interesting Game Were You Have To Guess A Number  ")
+          print("A Number Which I Am Thinking Right Now ")
+          print("Can You Guess The Number Right? ")
+          player_name=input("But First May I Know Your Name- ")
+
+          // Ask user if he wants to play alon with a note
+          play=input("Hi, {} and would you like to play this game? Enter(yes/no) ".format(player_name))  
+          print("Let's start the game and have fun")
+          print("Note: 1. You only have 5 attempts to guess the correct answer")
+          print("      2. The total score of the game is 60")
+          print("         10 points will decreased for your extra chance taken")
+
+          // Set initial attempts and total initial score
+           attempts=0
+           score=60
+
+          //while user wants to play
+           while play.lower()=="yes":
+
+          // total attempts given
+           If attempts<5:
+
+                 // When user types yes, print
+                  guess=input("Now Pick Any Number Between 1 to 50:\n")
+                     
+                       //Loop starts
+                       // Number not in range
+                       print("Guess Within The Range ")
+                       print("Your number was not in the range of 1 to 50 ")
+
+    // If user is correct, break out of the loop
+     print("Wow, Congrats!! You Got The Answer Right")
+     print("You are a real gamer")
+
+     // Print out the number of attempts it took along with the score
+      print("It Took {} Attempts To Get The Correct Answer".format(attempts))
+      print("Your total score is {}".format(score))
+
+     // Ask for another Game
+     play =input("Would You Like To Play Again Enter\n(yes/no):\n")
+  
+     // Again set initial attempts and total initial score
+      attempts=0
+      score=60
+
+      //Again setting random number function with range
+      random_number=int(random.randint(1,50)) 
+
+                          // User refuse to play 
+                           print("😞")
+                           print("Ok no problem, I guess you will miss out on the fun...")
+                           break
+                                     
+                          // if player guessed number is too high, give hint for the range
+                         print("Oh no!! The Number Which I Guessed Is Too Low")  
+                         print("Don't worry, give it one more try")
+                         print("Hint- The number which i am thinking is in the range of {},{} :".format(random_number-5, random_number+5))  
+
+                         // Increase attempt by 1 and decrease score by 10
+                         attempts+=1
+score-=10
+
+                         // if player guessed number is too low, give hint for a range
+                         print("The Number Which I Guessed Is Too High")
+                         print("Don't worry, give it one more try")
+                         print("Hint- The number is in the range of {},{} :".format(random_number-5, random_number+5))
+          
+                         // Increase attempt by 1 and decrease the score by 10
+                          attempts+=1
+                          score-=10
+             
+           //Value error
+           print("Not A Valid Number, Try Again")
+           print("Your number should be between 1 to 50 ")
+           print("({})".format(err))
+
+   //When attempts are over 
+    print("Oh no!! Your attempts are over")
+
+   // Ask again to play the game and set initial attempts as well as set total initial score
+   attempts=0
+   score=60
+//user refuse to play
+print("😞")
+ print("Ok no problem, I guess you will miss out on the fun...")
+  break
+
+ // End of LOOP over guesses
+        end
+endfunction
